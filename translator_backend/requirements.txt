@@ -1,0 +1,5 @@
+Flask
+SpeechRecognition
+deep-translator
+gTTS
+pydub
