@@ -14,12 +14,16 @@ app = Flask(__name__)
 # We map the language name to the codes required by Google's APIs.
 # Format: 'Name': {'speech_code': 'BCP-47 code', 'trans_code': 'ISO-639-1 code'}
 LANGUAGES = {
-    'Hindi': {'speech': 'hi-IN', 'trans': 'hi'},
-    'Kannada': {'speech': 'kn-IN', 'trans': 'kn'},
-    'Tamil': {'speech': 'ta-IN', 'trans': 'ta'},
-    'Telugu': {'speech': 'te-IN', 'trans': 'te'},
+    'English':   {'speech': 'en-US', 'trans': 'en'},
+    'Hindi':     {'speech': 'hi-IN', 'trans': 'hi'},
+    'Kannada':   {'speech': 'kn-IN', 'trans': 'kn'},
+    'Tamil':     {'speech': 'ta-IN', 'trans': 'ta'},
+    'Telugu':    {'speech': 'te-IN', 'trans': 'te'},
     'Malayalam': {'speech': 'ml-IN', 'trans': 'ml'},
-    'English': {'speech': 'en-US', 'trans': 'en'} # Added for testing
+    'Marathi':   {'speech': 'mr-IN', 'trans': 'mr'},
+    'Gujarati':  {'speech': 'gu-IN', 'trans': 'gu'},
+    'Bengali':   {'speech': 'bn-IN', 'trans': 'bn'},
+    'Punjabi':   {'speech': 'pa-IN', 'trans': 'pa'}
 }
 
 # Create a folder to store temporary audio files
@@ -160,4 +164,4 @@ def get_audio(filename):
 
 if __name__ == '__main__':
     # Run the server on all interfaces so the emulator/phone can access it
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)
